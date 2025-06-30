@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inicio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".InicioActivity">
+
+    <!-- TEMPORIZADOR -->
+    <!--Minutos-->
+    <NumberPicker
+        android:id="@+id/minutes_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"/>
+    //Segundos
+    <NumberPicker
+        android:id="@+id/seconds_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STAR"
+        android:fontFamily="@font/press_start"
+        app:layout_constraintTop_toBottomOf="@+id/TopBoard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!--Texto del temporizador-->
+    <TextView
+        android:id="@+id/timer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="32dp"
+        android:textColor="#F9F9FF"
+        android:fontFamily="@font/press_start"
+        app:layout_constraintTop_toBottomOf="@+id/start_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+
+    <!--Nave y Asteroide-->
+    <ImageView
+        android:id="@+id/asteroide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/mimi_planet"
+        app:layout_constraintTop_toBottomOf="@+id/timer_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintWidth_percent="0.68"
+        android:translationY="36dp"
+        />
+
+    <ImageView
+        android:id="@+id/nave_carga"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mimi_loadnship"
+        app:layout_constraintTop_toBottomOf="@+id/timer_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintWidth_percent="1.1"
+        android:translationY="-40dp"
+        />
+
+
+
+    <!--TopBoard-->
+    <ImageView
+        android:id="@+id/TopBoard"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line_s_mimi"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    //Título
+    <TextView
+        android:id="@+id/titulo"
+        android:translationY="30dp"
+        android:translationX="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="MIMI STUDY"
+        android:textColor="#287DE0"
+        android:fontFamily="@font/press_start"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@id/titulo"
+        android:translationY="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="MIMI STUDY"
+        android:textColor="#F9F9FF"
+        android:fontFamily="@font/press_start"
+        android:textSize="30sp"/>
+
+    //ImagenInferior
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="850dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mimi_temp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

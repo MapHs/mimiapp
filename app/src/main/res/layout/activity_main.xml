@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:translationY="30dp"
+        android:translationX="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="MIMI INICIO"
+        android:textColor="#287de0"
+        android:fontFamily="@font/press_start"
+        android:textSize="50sp"
+        />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:translationY="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="MIMI INICIO"
+        android:textColor="#f9f9ff"
+        android:fontFamily="@font/press_start"
+        android:textSize="50sp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mimi_back_wb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/centered_group"
+        android:translationY="100dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/register_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/mimi_icon"
+            android:translationY="20dp"
+            />
+
+        //Nombre usuario
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/jersey"
+            android:hint="Usuario"
+            android:inputType="text"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="22sp" />
+
+        //Contraseña
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/jersey"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="22sp" />
+
+        // Botón
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boton"
+            android:backgroundTint="@null"
+            android:fontFamily="@font/press_start"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="INGRESAR"
+            android:textColor="#F9F9FF"
+            android:textSize="24sp"
+            />
+
+    </LinearLayout>
+
+    // PasswordForgot
+    <TextView
+        android:id="@+id/forgot_password"
+        android:translationY="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Olvidaste tu contraseña?"
+        android:gravity="center"
+        android:textColor="#F9F9FF"
+        android:fontFamily="@font/jersey"
+        android:textSize="22sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/centered_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    //Registrarse
+
+    <TextView
+        android:id="@+id/register_button"
+        android:translationY="10dp"
+        android:translationX="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="REGISTRARME!"
+        android:textColor="#f9f9ff"
+        android:fontFamily="@font/press_start"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/usermimi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".UserActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line_s_mimi"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    //Título
+    <TextView
+        android:id="@+id/titulo"
+        android:translationY="30dp"
+        android:translationX="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="MIMI PERFIL"
+        android:textColor="#287DE0"
+        android:fontFamily="@font/press_start"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@id/titulo"
+        android:translationY="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="MIMI PERFIL"
+        android:textColor="#F9F9FF"
+        android:fontFamily="@font/press_start"
+        android:textSize="30sp"/>
+
+    //ImagenInferior
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="850dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mimi_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
